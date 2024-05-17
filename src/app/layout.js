@@ -6,8 +6,9 @@ import Footer from "@/components/Footer";
 const karla = Karla({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Cruda Studio",
-  description: "Tu tienda de accesorios de moda favorita",
+  title: "CRUDA: Joyas auténticas, artesanales, hechas a mano con pasión ",
+  description:
+    "Materiales nobles, artesanía tradicional y diseños únicos. Piezas que reflejan la esencia natural de cada elemento. Celebramos la singularidad y la belleza atemporal. Más que joyas, una conexión con lo verdadero.",
 };
 
 export default function RootLayout({ children }) {
