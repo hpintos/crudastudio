@@ -11,7 +11,16 @@ function Loading() {
 }
 
 const ProductList = ({ children }) => {
-  const products = useProducts();
+  const { error, products } = useProducts();
+
+  if (error) {
+    console.error(error);
+    return (
+      <div className="text-center">
+        <p className="text-2xl">Error al cargar los productos</p>
+      </div>
+    );
+  }
 
   if (!products?.length) {
     return <Loading />;

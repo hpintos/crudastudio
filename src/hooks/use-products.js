@@ -3,6 +3,7 @@ import { db } from "../../firebase.js";
 import { collection, getDocs } from "firebase/firestore";
 
 export const useProducts = () => {
+  const [error, setError] = useState(null);
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -21,5 +22,5 @@ export const useProducts = () => {
       });
   }, []);
 
-  return products;
+  return { error, products };
 };
